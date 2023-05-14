@@ -56,9 +56,9 @@ To train a model with name `myexperiment` from scratch use the following command
 
 ```
 python train.py --name myexperiment \
---dataroot examples/train/photos \
+--dataroot examples/train/sketches \
 --depthroot examples/train/depthmaps \
---root2 examples/train/drawings \
+--root2 examples/train/photographs \
 --no_flip
 ```
 Replace the example data `examples/train/photos`, `examples/train/depthmaps`, and `examples/train/drawings` with the paths to the dataset of photographs, depth maps, and line drawings respectively. Corresponding images and depth maps in the file paths specified by `--dataroot` and `--depthroot` should have the same file names. You will also need to specify a path to an unaligned dataset of line drawings with `--root2`. A small example of training data is provided in `examples/train`.
@@ -84,4 +84,4 @@ If you find this work useful please use the following citation:
 
 ## Acknowledgements
 
-Model code adapted from [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) and [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
+Model code adapted from [informative-drawings](https://github.com/carolineec/informative-drawings), [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) and [pytorch-CycleGAN-and-pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
