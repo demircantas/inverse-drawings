@@ -26,7 +26,7 @@ parser.add_argument('--dataroot', type=str, default='', help='root directory of 
 parser.add_argument('--depthroot', type=str, default='', help='dataset of corresponding ground truth depth maps')
 
 parser.add_argument('--input_nc', type=int, default=3, help='number of channels of input data')
-parser.add_argument('--output_nc', type=int, default=1, help='number of channels of output data')
+parser.add_argument('--output_nc', type=int, default=3, help='number of channels of output data') # DT changed from 1
 parser.add_argument('--geom_nc', type=int, default=3, help='number of channels of geometry data')
 parser.add_argument('--every_feat', type=int, default=1, help='use transfer features for the geometry loss')
 parser.add_argument('--num_classes', type=int, default=55, help='number of classes for inception')

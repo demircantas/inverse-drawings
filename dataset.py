@@ -94,9 +94,14 @@ class UnpairedDepthDataset(data.Dataset):
                 howmanyrepeat = (len(self.data) // len(self.img2)) + 1
                 self.img2 = self.img2 * howmanyrepeat
             elif len(self.img2) > len(self.data):
-                howmanyrepeat = (len(self.img2) // len(self.data)) + 1
-                self.data = self.data * howmanyrepeat
-                self.depth_maps = self.depth_maps * howmanyrepeat
+                try:
+                    howmanyrepeat = (len(self.img2) // len(self.data)) + 1
+                    self.data = self.data * howmanyrepeat
+                    self.depth_maps = self.depth_maps * howmanyrepeat
+                except:
+                    print('could not find depth maps')
+                    import sys
+                    sys.exit(0)
             
 
             cutoff = min(len(self.data), len(self.img2))

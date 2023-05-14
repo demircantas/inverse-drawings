@@ -27,7 +27,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--name', type=str, help='name of this experiment')
 parser.add_argument('--checkpoints_dir', type=str, default='checkpoints', help='Where checkpoints are saved')
 parser.add_argument('--epoch', type=int, default=0, help='starting epoch')
-parser.add_argument('--n_epochs', type=int, default=100, help='number of epochs of training')
+parser.add_argument('--n_epochs', type=int, default=200, help='number of epochs of training') # DT: changed from 100
 parser.add_argument('--batchSize', type=int, default=4, help='size of the batches')
 parser.add_argument('--cuda', action='store_true', help='use GPU computation', default=True)
 parser.add_argument('--n_cpu', type=int, default=8, help='number of cpu threads to use during batch generation')
@@ -44,8 +44,8 @@ parser.add_argument('--lr', type=float, default=0.0002, help='initial learning r
 parser.add_argument('--momentum', type=float, default=0.9, help='momentum for optimizer')
 parser.add_argument('--decay_epoch', type=int, default=50, help='epoch to start linearly decaying the learning rate to 0')
 parser.add_argument('--size', type=int, default=256, help='size of the data crop (squared assumed)')
-parser.add_argument('--input_nc', type=int, default=3, help='number of channels of input data')
-parser.add_argument('--output_nc', type=int, default=1, help='number of channels of output data')
+parser.add_argument('--input_nc', type=int, default=3, help='number of channels of input data')  # DT: changed from 3
+parser.add_argument('--output_nc', type=int, default=3, help='number of channels of output data') # DT: changed from 1
 parser.add_argument('--geom_nc', type=int, default=3, help='number of channels of geom data')
 parser.add_argument('--ngf', type=int, default=64, help='# of gen filters in first conv layer')
 parser.add_argument('--ndf', type=int, default=64, help='# of discrim filters in first conv layer')
@@ -88,7 +88,7 @@ parser.add_argument('--num_classes', type=int, default=55, help='number of class
 parser.add_argument('--cos_clip', type=int, default=0, help='use cosine similarity for CLIP semantic loss')
 
 ### save options
-parser.add_argument('--save_epoch_freq', type=int, default=1000, help='how often to save the latest model in steps')
+parser.add_argument('--save_epoch_freq', type=int, default=20, help='how often to save the latest model in steps') # DT: changed from 1000
 parser.add_argument('--slow', type=int, default=0, help='only frequently save netG_A, netGeom')
 parser.add_argument('--log_int', type=int, default=50, help='display frequency for tensorboard')
 
