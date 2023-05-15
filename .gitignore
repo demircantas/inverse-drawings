@@ -2,3 +2,5 @@
 /*.pyc
 *.pth
 __pycache__/
+checkpoints/
+examples/
