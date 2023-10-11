@@ -17,7 +17,7 @@ loss_D_A_losses = []
 loss_recog_losses = []
 
 # Read the log file
-with open('checkpoints/myexperiment_0/loss_log.txt', 'r') as f:
+with open('checkpoints/myexperiment_2_shpNt/loss_log.txt', 'r') as f:
     lines = f.readlines()
 
 # Extract loss values from each line
@@ -37,10 +37,10 @@ for line in lines:
             iterations.append(len(total_G_losses) * 50)  # Assuming each line represents 50 iterations
 
 # Plot the losses
-# plt.plot(iterations, total_G_losses, label='total_G')
-# plt.plot(iterations, loss_RC_losses, label='loss_RC')
-# plt.plot(iterations, loss_cycle_Geom_losses, label='loss_cycle_Geom')
-# plt.plot(iterations, loss_GAN_losses, label='loss_GAN')
+plt.plot(iterations, total_G_losses, label='total_G')
+plt.plot(iterations, loss_RC_losses, label='loss_RC')
+plt.plot(iterations, loss_cycle_Geom_losses, label='loss_cycle_Geom')
+plt.plot(iterations, loss_GAN_losses, label='loss_GAN')
 plt.plot(iterations, loss_D_B_losses, label='loss_D_B')
 plt.plot(iterations, loss_D_A_losses, label='loss_D_A')
 plt.plot(iterations, loss_recog_losses, label='loss_recog')
