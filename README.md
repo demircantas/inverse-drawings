@@ -1,8 +1,5 @@
 # Inverse Drawings: Learning to generate images that convey geometry and semantics from line drawings
 
-### Forked from: [[project page]](https://carolineec.github.io/informative_drawings/) [[paper]](https://arxiv.org/abs/2203.12691) [[video]](TODO) [[demo]](https://huggingface.co/spaces/carolineec/informativedrawings)
-
-
 ## Setup
 
 ### Clone this repository
